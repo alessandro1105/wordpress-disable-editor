@@ -1,0 +1,15 @@
+{
+    "name": "dartmoon/wordpress-disable-editor",
+    "description": "Disable editor for specific templates, pages, posts, etc.",
+    "type": "wordpress-muplugin",
+    "license": "PROPRIETARY",
+    "authors": [
+        {
+            "name": "Dartmoon",
+            "email": "hello@dartmoon.io"
+        }
+    ],
+    "require": {
+        "composer/installers": "^2.0"
+    }
+}
