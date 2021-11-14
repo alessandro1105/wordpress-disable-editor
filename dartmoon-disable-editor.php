@@ -22,7 +22,7 @@ function drtn_disable_gutemberg($can_edit, $post_type) {
 
     // Let the template decide whether 
     // to show the template
-    $can_edit = apply_filters('dartmoon_disable_gutemberg', $can_edit, (int) $_GET['post']);
+    $can_edit = apply_filters('drtn/disable_gutemberg', $can_edit, (int) $_GET['post']);
 	return $can_edit;
 }
 add_filter('gutenberg_can_edit_post_type', 'drtn_disable_gutemberg', 10, 2);
@@ -41,7 +41,7 @@ function drtn_disable_classic_editor() {
 
     // Let the template decide whether 
     // to show the template
-    $can_edit = apply_filters('drtn_disable_editor', post_type_supports('page', 'editor'), (int) $_GET['post']);
+    $can_edit = apply_filters('drtn/disable_editor', post_type_supports('page', 'editor'), (int) $_GET['post']);
     
     // If the user do not want the editor let's remove it
 	if (!$can_edit) {
