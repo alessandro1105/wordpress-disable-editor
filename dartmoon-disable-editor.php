@@ -3,7 +3,7 @@
  * Plugin Name:  Dartmoon disable editor 
  * Plugin URI:   https://dartmoon.io
  * Description:  Disable editor for specific templates, pages, posts, etc.
- * Version:      1.0.1
+ * Version:      1.1.0
  * Author:       Dartmoon
  * Author URI:   https://dartmoon.io
  * License:      PROPRIETARY
