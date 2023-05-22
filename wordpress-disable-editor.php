@@ -3,7 +3,7 @@
  * Plugin Name:  Dartmoon WordPress Disable Editor 
  * Plugin URI:   https://dartmoon.io
  * Description:  Disable editor for specific templates, pages, posts, etc.
- * Version:      1.1.2
+ * Version:      1.1.3
  * Author:       Dartmoon
  * Author URI:   https://dartmoon.io
  * License:      MIT
@@ -28,8 +28,8 @@ function drtn_disable_gutemberg($can_edit, $post_type) {
 
 	return $can_edit;
 }
-add_filters('gutenberg_can_edit_post_type', 'drtn_disable_gutemberg', 10, 2);
-add_filters('use_block_editor_for_post_type', 'drtn_disable_gutemberg', 10, 2);
+add_filter('gutenberg_can_edit_post_type', 'drtn_disable_gutemberg', 10, 2);
+add_filter('use_block_editor_for_post_type', 'drtn_disable_gutemberg', 10, 2);
 
 /**
  * Disable Classic Editor by template
