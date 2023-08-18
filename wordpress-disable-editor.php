@@ -10,9 +10,9 @@
  */
 
 /**
- * Disable Gutemberg editor
+ * Disable Gutenberg editor
  */
-function drtn_disable_gutemberg($can_edit, $post_type) {
+function drtn_disable_gutenberg($can_edit, $post_type) {
     // If we are not on the admin interface
     // or there is no ID int the get parameters
     // we canno do anithing
@@ -24,12 +24,12 @@ function drtn_disable_gutemberg($can_edit, $post_type) {
     // to show the template
     $post_id = (int) ($_GET['post'] ?? 0);
     $post_type = $_GET['post_type'] ?? get_post_type($post_id);
-    $can_edit = apply_filters('drtn/disable_gutemberg', $can_edit, $post_id, $post_type);
+    $can_edit = apply_filters('drtn/disable_gutenberg', $can_edit, $post_id, $post_type);
 
 	return $can_edit;
 }
-add_filter('gutenberg_can_edit_post_type', 'drtn_disable_gutemberg', 10, 2);
-add_filter('use_block_editor_for_post_type', 'drtn_disable_gutemberg', 10, 2);
+add_filter('gutenberg_can_edit_post_type', 'drtn_disable_gutenberg', 10, 2);
+add_filter('use_block_editor_for_post_type', 'drtn_disable_gutenberg', 10, 2);
 
 /**
  * Disable Classic Editor by template
